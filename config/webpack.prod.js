@@ -7,7 +7,7 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 // const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 // const { extendDefaultPlugins } = require('svgo');
-const getStyleLoader = (loader) => {
+const getStyleLoader = loader => {
   return [
     MiniCssExtractPlugin.loader,
     'css-loader',
@@ -92,7 +92,7 @@ module.exports = {
       //设置缓存路径
       cacheLocation: path.resolve(
         __dirname,
-        '../node_modules/.cache/.eslintcache'
+        '../node_modules/.cache/.eslintcache',
       ),
     }),
     new HtmlWebpackPlugin({
@@ -158,7 +158,7 @@ module.exports = {
     },
     //会为每个入口添加一个只含有 runtime 的额外 chunk，当引用的模块重新打包时，入口文件不会重现打包，避免缓存失效
     runtimeChunk: {
-      name: (entrypoint) => `runtime-${entrypoint.name}.js`,
+      name: entrypoint => `runtime-${entrypoint.name}.js`,
     },
   },
   resolve: {
