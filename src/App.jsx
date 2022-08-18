@@ -5,7 +5,7 @@ const About = lazy(() =>
   import(/* webpackChunkName: 'about' */ './pages/About')
 );
 const Home = lazy(() => import(/* webpackChunkName: 'home' */ './pages/Home'));
-
+const a = 1;
 function App() {
   return (
     <div>
