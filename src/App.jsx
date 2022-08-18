@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 
 const About = lazy(() =>
-  import(/* webpackChunkName: 'about' */ './pages/About'),
+  import(/* webpackChunkName: 'about' */ './pages/About')
 );
 const Home = lazy(() => import(/* webpackChunkName: 'home' */ './pages/Home'));
 function App() {
