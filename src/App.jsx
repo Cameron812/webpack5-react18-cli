@@ -5,7 +5,6 @@ const About = lazy(() =>
   import(/* webpackChunkName: 'about' */ './pages/About')
 );
 const Home = lazy(() => import(/* webpackChunkName: 'home' */ './pages/Home'));
-console.log(2);
 function App() {
   return (
     <div>
