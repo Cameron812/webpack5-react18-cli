@@ -1,8 +1,6 @@
 import React from 'react';
-import './index.less';
-
+import LoginForm from '../../components/LoginForm';
 const Home = () => {
-  return <div className="title">Home</div>;
+  return <LoginForm />;
 };
-
 export default Home;
