@@ -17,7 +17,18 @@ const Navigator = () => {
           </li>
         )}
         <li>
-          <Link to="/derived-from-props">Derive From Pros</Link>
+          <Link to="/derive-state-props">
+            How to update state from props in React
+          </Link>
+        </li>
+        <li>
+          <Link to="/react-memo">How to use React memo</Link>
+        </li>
+        <li>
+          <Link to="/usecallback-hook">How to useCallback in React</Link>
+        </li>
+        <li>
+          <Link to="/usememo-hook">How to useMemo in React</Link>
         </li>
       </ul>
     </div>

@@ -7,6 +7,15 @@ const DerivedFromProps = lazy(() =>
   import(/* webpackChunkName: 'form' */ './pages/DerivedFromProps')
 );
 const Home = lazy(() => import(/* webpackChunkName: 'home' */ './pages/Home'));
+const ReactMemo = lazy(() =>
+  import(/* webpackChunkName: 'react-memo' */ './pages/ReactMemo')
+);
+const UseCallback = lazy(() =>
+  import(/* webpackChunkName: 'use-callback' */ './pages/UseCallback')
+);
+const UseMemo = lazy(() =>
+  import(/* webpackChunkName: 'use-memo' */ './pages/UseMemo')
+);
 function App() {
   return (
     <AuthProvider>
@@ -17,10 +26,34 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route
-            path="/derived-from-props"
+            path="/derive-state-props"
             element={
               <ProtectedRoute>
                 <DerivedFromProps />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/react-memo"
+            element={
+              <ProtectedRoute>
+                <ReactMemo />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/usecallback-hook"
+            element={
+              <ProtectedRoute>
+                <UseCallback />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/usememo-hook"
+            element={
+              <ProtectedRoute>
+                <UseMemo />
               </ProtectedRoute>
             }
           />
