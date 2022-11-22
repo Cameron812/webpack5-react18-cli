@@ -16,6 +16,9 @@ const UseCallback = lazy(() =>
 const UseMemo = lazy(() =>
   import(/* webpackChunkName: 'use-memo' */ './pages/UseMemo')
 );
+const PaginatedList = lazy(() =>
+  import(/* webpackChunkName: 'paginated-list' */ './pages/PaginatedList')
+);
 function App() {
   return (
     <AuthProvider>
@@ -25,6 +28,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/paginated-list" element={<PaginatedList />} />
           <Route
             path="/derive-state-props"
             element={

@@ -30,6 +30,9 @@ const Navigator = () => {
         <li>
           <Link to="/usememo-hook">How to useMemo in React</Link>
         </li>
+        <li>
+          <Link to="/paginated-list">Paginated List in React</Link>
+        </li>
       </ul>
     </div>
   );
