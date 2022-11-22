@@ -1,18 +1,24 @@
 import React from 'react';
-import ListItem from '../ListItem';
-
+import { ListItem, ListItemWithRemove, ListItemWithUpdate } from '../ListItem';
 const List = React.memo(({ list, onRemove, onUpdateName }) => {
   console.log('List');
   return (
     <ul>
-      {list.map((item) => (
-        <ListItem
-          key={item.id}
-          item={item}
-          onRemove={onRemove}
-          onUpdateName={onUpdateName}
-        />
-      ))}
+      {list.map((item) => {
+        if (onRemove)
+          return (
+            <ListItemWithRemove key={item.id} item={item} onRemove={onRemove} />
+          );
+        if (onUpdateName)
+          return (
+            <ListItemWithUpdate
+              key={item.id}
+              item={item}
+              onUpdateName={onUpdateName}
+            />
+          );
+        return <ListItem key={item.id} item={item} />;
+      })}
     </ul>
   );
 });

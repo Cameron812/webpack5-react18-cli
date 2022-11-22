@@ -1,4 +1,5 @@
 import React from 'react';
+import { ListItemWithLink } from '../../components/ListItem';
 import { withLoading, withPaginated } from '../../HOCs';
 import './index.less';
 
@@ -72,9 +73,7 @@ export default function PaginatedList() {
 const List = ({ list }) => (
   <div className="list">
     {list.map((item) => (
-      <div className="list-row" key={item.objectID}>
-        <a href={item.url}>{item.title}</a>
-      </div>
+      <ListItemWithLink item={item} />
     ))}
   </div>
 );

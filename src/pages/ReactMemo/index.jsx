@@ -47,7 +47,7 @@ const ReactMemo = () => {
         you should see the following output:
         <pre>
           <pre
-            class="prism-code language-text"
+            className="prism-code language-text"
             style={{
               color: 'rgb(214, 222, 235)',
               backgroundColor: 'rgb(1, 22, 39)',
@@ -57,20 +57,20 @@ const ReactMemo = () => {
               maxWidth: 'calc(100vw - 80px)'
             }}
           >
-            <div class="token-line" style={{ color: 'rgb(214, 222, 235)' }}>
+            <div className="token-line" style={{ color: 'rgb(214, 222, 235)' }}>
               <span
-                class="token plain"
+                className="token plain"
                 style={{ display: 'inline-block' }}
               ></span>
             </div>
-            <div class="token-line" style={{ color: 'rgb(214, 222, 235)' }}>
-              <span class="token plain">Render: ReactMemo</span>
+            <div className="token-line" style={{ color: 'rgb(214, 222, 235)' }}>
+              <span className="token plain">Render: ReactMemo</span>
             </div>
-            <div class="token-line" style={{ color: 'rgb(214, 222, 235)' }}>
-              <span class="token plain">Render: List</span>
+            <div className="token-line" style={{ color: 'rgb(214, 222, 235)' }}>
+              <span className="token plain">Render: List</span>
             </div>
-            <div class="token-line" style={{ color: 'rgb(214, 222, 235)' }}>
-              <span class="token plain">Render: ListItem</span>
+            <div className="token-line" style={{ color: 'rgb(214, 222, 235)' }}>
+              <span className="token plain">Render: ListItem</span>
             </div>
           </pre>
         </pre>

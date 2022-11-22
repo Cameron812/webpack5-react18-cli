@@ -1,5 +1,22 @@
 import React from 'react';
-const ListItem = React.memo(({ item, onRemove, onUpdateName }) => {
+export const ListItem = ({ item }) => {
+  return (
+    <li>
+      <label>{item.name}</label>
+    </li>
+  );
+};
+export const ListItemWithRemove = ({ item, onRemove }) => {
+  return (
+    <li>
+      <label>{item.name}</label>
+      <button type="button" onClick={() => onRemove(item.id)}>
+        -
+      </button>
+    </li>
+  );
+};
+export const ListItemWithUpdate = React.memo(({ item, onUpdateName }) => {
   console.log('ListItem');
   const [name, setName] = React.useState(item.name + '!');
   const handleNameChange = (event) => {
@@ -12,11 +29,6 @@ const ListItem = React.memo(({ item, onRemove, onUpdateName }) => {
   return (
     <li>
       <label>{item.name}</label>
-      {onRemove && (
-        <button type="button" onClick={() => onRemove(item.id)}>
-          -
-        </button>
-      )}
       {onUpdateName && (
         <span>
           <input type="text" value={name} onChange={handleNameChange} />
@@ -28,5 +40,10 @@ const ListItem = React.memo(({ item, onRemove, onUpdateName }) => {
     </li>
   );
 });
-
-export default ListItem;
+export const ListItemWithLink = ({ item }) => {
+  return (
+    <div className="list-row" key={item.objectID}>
+      <a href={item.url}>{item.title}</a>
+    </div>
+  );
+};
