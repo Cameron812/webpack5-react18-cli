@@ -19,6 +19,9 @@ const UseMemo = lazy(() =>
 const PaginatedList = lazy(() =>
   import(/* webpackChunkName: 'paginated-list' */ './pages/PaginatedList')
 );
+const ConditionalHooks = lazy(() =>
+  import(/* webpackChunkName: 'conditional-hooks' */ './pages/ConditionalHooks')
+);
 function App() {
   return (
     <AuthProvider>
@@ -29,6 +32,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/paginated-list" element={<PaginatedList />} />
+          <Route path="/conditional-hooks" element={<ConditionalHooks />} />
           <Route
             path="/derive-state-props"
             element={
