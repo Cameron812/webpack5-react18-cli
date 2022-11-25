@@ -1,11 +1,11 @@
 import React from 'react';
 
-export const withLoading = (Component) => (props) => {
+export const withLoading = (conditionFn) => (Component) => (props) => {
   return (
     <div>
       <Component {...props} />
       <div className="interactions">
-        {props.isLoading && <span>Loading...</span>}
+        {conditionFn(props) && <span>Loading...</span>}
       </div>
     </div>
   );

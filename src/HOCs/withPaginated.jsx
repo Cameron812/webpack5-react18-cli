@@ -1,14 +1,17 @@
 import React from 'react';
 
-export const withPaginated = (Component) => (props) =>
+export const withPaginated = (conditionFn) => (Component) => (props) =>
   (
     <div>
       <Component {...props} />
       <div className="interactions">
-        {props.page !== null && !props.isLoading && (
-          <button type="button" onClick={props.onPaginatedSearch}>
-            More
-          </button>
+        {conditionFn(props) && (
+          <div>
+            <div>Something went wrong...</div>
+            <button type="button" onClick={props.onPaginatedSearch}>
+              Try again
+            </button>
+          </div>
         )}
       </div>
     </div>
