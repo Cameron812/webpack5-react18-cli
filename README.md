@@ -58,3 +58,7 @@
         'test'      // 增加测试，包括单元测试、集成测试等
      ];
      ```
+
+  5. Commit template
+
+     https://github.com/leoforfree/cz-customizable
