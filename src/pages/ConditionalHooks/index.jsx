@@ -48,7 +48,8 @@ const ConditionalHooks = () => {
         In conclusion, most often when rendering hooks conditionally, in a loop,
         or in a changed order, move the hook one level down to the child
         component where it has its fixed place and is computed with the
-        component without any condition.{' '}
+        component without any condition(extract a new component and put it
+        there).
       </div>
       <List list={list} />
     </div>

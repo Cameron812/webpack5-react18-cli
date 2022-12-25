@@ -2,7 +2,8 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
-
+const BundleAnalyzerPlugin =
+  require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const getStyleLoader = (loader) => {
   return [
     'style-loader',
@@ -94,7 +95,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, '../public/index.html')
     }),
-    new ReactRefreshWebpackPlugin() //enable JS HMR
+    new ReactRefreshWebpackPlugin(), //enable JS HMR
+    new BundleAnalyzerPlugin()
   ],
   devtool: 'cheap-module-source-map',
   optimization: {
