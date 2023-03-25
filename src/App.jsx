@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navigator from './components/Navigator';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider } from './providers/AuthProvider';
+
 const DerivedFromProps = lazy(() =>
   import(/* webpackChunkName: 'form' */ './pages/DerivedFromProps')
 );
@@ -22,6 +23,10 @@ const PaginatedList = lazy(() =>
 const ConditionalHooks = lazy(() =>
   import(/* webpackChunkName: 'conditional-hooks' */ './pages/ConditionalHooks')
 );
+const TestWithMsw = lazy(() =>
+  import(/* webpackChunkName: 'msw-test' */ './pages/TestWithMsw')
+);
+
 function App() {
   return (
     <AuthProvider>
@@ -33,6 +38,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/paginated-list" element={<PaginatedList />} />
           <Route path="/conditional-hooks" element={<ConditionalHooks />} />
+          <Route path="/msw-test" element={<TestWithMsw />} />
           <Route
             path="/derive-state-props"
             element={

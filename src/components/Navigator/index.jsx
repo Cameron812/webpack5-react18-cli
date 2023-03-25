@@ -36,6 +36,9 @@ const Navigator = () => {
         <li>
           <Link to="/conditional-hooks">Conditional Hooks in React</Link>
         </li>
+        <li>
+          <Link to="/msw-test">Test with msw</Link>
+        </li>
       </ul>
     </div>
   );
